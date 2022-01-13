@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="stilos/index.css">
+    <link rel="stylesheet" href="stilos/game.css">
+</head>
+<body class="fondo" id="index">
+    <!-- LOGIN -->
+    <div id="login"> 
+        <h1>
+            Piedra - Papel - Tijera
+        </h1>
+
+        <form class="login-user" id="formulario">
+            <div class="cont-login">
+                <div class="campos" id="grupo_user">
+                    <input type="text" placeholder="Ingresar usuario" name="user" id="user">
+                    <h6 class="msj">Escribe un usuario</h6>
+                </div>
+                <div class="campos" id="grupo_password">
+                    <input type="password" placeholder="Ingresar contraseña" name="password" id="password">
+                    <h6 class="msj">Escribe una contraseña</h6>
+                </div>
+            </div>
+            <div class="mensaje-error" id="mensaje-error">
+				<p><i class=""></i> <b>Error:</b> Usuario o Contraseña incorrecta </p>
+			</div>
+            <div class="mensaje-info" id="mensaje-info">
+                <p><i class=""></i> <b>Información:</b> Ingresar todos los campos </p>
+            </div>
+            <div class="cont-btn">
+                <button class="btn" onclick="logins()">
+                    Ingresar
+                </button>
+            </div>
+        </form>
+        <div class="userDefaul">
+            Usuario por defecto
+            <br>
+            Usuario : admin
+            <br>
+            Contraseña : 12345678
+
+        </div>
+    </div>
+    <!-- FIN LOGIN -->
+    <script src="js/login.js"></script>
+    <!-- SECCION JUEGO -->
+    <div class="game" id="game">
+        <div class="cabezera">
+            <h2>Inicio del Juego</h2>
+            <div class="information" id="information">
+                N° Juego: 1 | N° Ronda: 0/10 | Puntaje: 0
+            </div>
+        </div>
+        <div class="cont-game">
+            <div class="gamers">
+                <h3>Jugador</h3>
+                <div class="selection">
+                    <img id="player" src="img/Player.png" alt="">
+                </div>
+                <div id="btnPlayer">
+                    <img class="btn-select" id="bst" src="img/left-st.jpg" alt="">
+                    <img class="btn-select" id="bpp" src="img/left-pp.jpg" alt="">
+                    <img class="btn-select" id="bsc" src="img/left-sc.jpg" alt="">
+                </div>
+            </div>
+            <div class="virtual">
+                <h3>Computadora</h3>
+                <div class="selection">
+                    <img id="computer" src="img/ia.png" alt="">
+                </div>
+            </div>
+            <div class="result">
+                <h3>Resultados</h3>
+                <div class="selection" id="result" >
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button class="btns" id="close" onclick="closeGame()">
+                Salir
+            </button>
+            <button class="btns" id="clear" onclick="clearHis()"> 
+                Limpiar Resultados
+            </button>
+        </div>
+    </div>
+    <!-- FIN SECCION JUEGO -->
+    <!-- MODAL INFROMATIVO -->
+    <div id="endGame" class="endGame">
+        <div class="endGame-cont">
+            <span class="close">&times;</span>
+            <div class="mensajeEnd" id="mensajeEnd">
+                FIN DEL JUEGO
+                <br>
+                Obtuviste un puntaje de: 
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODAL INFROMATIVO -->
+    <script src="js/game.js"></script>
+</body>
+</html>
